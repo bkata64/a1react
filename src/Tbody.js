@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Tbody = () => {
     const [kutyak, setKutyak] = useState([]);
     useEffect( () => {        
-       fetch("http://localhost:9000/dogs", {
+       fetch(process.env.REACT_APP_IP + "/dogs", {
         method: "get"        
        })
        .then((res) => res.json())

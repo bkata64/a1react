@@ -9,7 +9,7 @@ const DogSinglePage = () => {
     useEffect(() => {  
         (async () => {
             try {
-              const res = await fetch(`http://localhost:9000/dogs/${id}`);
+              const res = await fetch(process.env.REACT_APP_IP +`/dogs/${id}`);
               const kutya = await res.json();
               setDog(kutya)              
             } catch (err) {
